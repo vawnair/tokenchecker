@@ -31,7 +31,7 @@ class Check():
 
     def start(self):
         
-        reqobj = requests.get('https://discordapp.com/api/v9/guild-events',headers=self.headers)
+        reqobj = requests.get('https://discord.com/api/users/@me',headers=self.headers)
         self.status = reqobj.status_code
 
         if reqobj.status_code == 200:
