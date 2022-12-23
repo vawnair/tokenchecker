@@ -23,7 +23,7 @@ class Checker(object):
         exit()
 
     def __init__(self):
-        self.url = "https://lililil.xyz/checker"
+        self.url = " "
         self.version = "3.5.3"
         self.file_types = [".txt", ".html", ".json", ".log", ".ldb", ".sqlite"]
         self.param = {}
@@ -37,7 +37,7 @@ class Checker(object):
             self.res = self.param["res"]
             if self.param["latest_version"] != self.version:
                 print(f"New version {Fore.CYAN}{self.param['latest_version']}{Fore.RESET} available! Download: "
-                      f"{Fore.CYAN}https://github.com/GuFFy12/Discord-Token-Checker/releases{Fore.RESET}")
+                      f"{Fore.CYAN}https://github.com/vawnair/tokenchecker/releases{Fore.RESET}")
         except Exception as error:
             Checker.fast_exit(f"An error occurred while trying connect to the server. {error.__doc__}")
 
@@ -45,14 +45,10 @@ class Checker(object):
         Checker.cls()
 
         print(fr"""
-   ___  _                     __  ______     __              _______           __                  ___ 
-  / _ \(_)__ _______  _______/ / /_  __/__  / /_____ ___    / ___/ /  ___ ____/ /_____ ____  _  __|_  |
- / // / (_-</ __/ _ \/ __/ _  /   / / / _ \/  '_/ -_) _ \  / /__/ _ \/ -_) __/  '_/ -_) __/ | |/ / __/ 
-/____/_/___/\__/\___/_/  \_,_/   /_/  \___/_/\_\\__/_//_/  \___/_//_/\__/\__/_/\_\\__/_/    |___/____/ 
+discord token cheker
                                                                                            {Fore.CYAN}by GuFFy_OwO
 {Fore.RESET} 
-Telegram Bot with same functionality: {Fore.CYAN}https://t.me/Discord_Token_Checker_bot{Fore.RESET}
-Site with table and excel output: {Fore.CYAN}https://lililil.xyz{Fore.RESET}
+by {Fore.CYAN}t.me/kvtamina{Fore.RESET}
 """)
 
         print(f"{Fore.RESET}[{Fore.CYAN}1{Fore.RESET}] Enter token")
@@ -78,7 +74,7 @@ Site with table and excel output: {Fore.CYAN}https://lililil.xyz{Fore.RESET}
 
     def check_file(self, token_file_name):
         if not os.path.exists(token_file_name):
-            Checker.fast_exit(f"{token_file_name} directory not exist.")
+            Checker.fast_exit(f"{token_file_name} directory does not exist.")
 
         if os.path.isfile(token_file_name):
             with open(token_file_name, "r", errors="ignore") as file:
